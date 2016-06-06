@@ -1043,7 +1043,7 @@ x3Ecx3E2E1eoHMdxHMdxNpP/B/atg9bws3ywAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># the total volume of stock being traded each day over the past year</span>
@@ -1059,11 +1059,11 @@ x3Ecx3E2E1eoHMdxHMdxNpP/B/atg9bws3ywAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[34]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x9442860&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10d2eb38&gt;</pre>
 </div>
 
 </div>
@@ -1687,7 +1687,7 @@ rkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#plotting out several moving averages</span>
@@ -1697,36 +1697,17 @@ rkJggg==
 <span class="k">for</span> <span class="n">ma</span> <span class="ow">in</span> <span class="n">moving_avg</span><span class="p">:</span>
     <span class="n">column_name</span> <span class="o">=</span> <span class="s2">&quot;MA for </span><span class="si">%s</span><span class="s2"> days&quot;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ma</span><span class="p">))</span>
     
-    <span class="n">GOOG</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="n">GOOG</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">],</span><span class="n">ma</span><span class="p">)</span>
+    <span class="n">GOOG</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">GOOG</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">],</span><span class="n">ma</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Anaconda2\lib\site-packages\ipykernel\__main__.py:8: FutureWarning: pd.rolling_mean is deprecated for Series and will be removed in a future version, replace with 
-	Series.rolling(window=10,center=False).mean()
-C:\Anaconda2\lib\site-packages\ipykernel\__main__.py:8: FutureWarning: pd.rolling_mean is deprecated for Series and will be removed in a future version, replace with 
-	Series.rolling(window=20,center=False).mean()
-C:\Anaconda2\lib\site-packages\ipykernel\__main__.py:8: FutureWarning: pd.rolling_mean is deprecated for Series and will be removed in a future version, replace with 
-	Series.rolling(window=50,center=False).mean()
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">GOOG</span><span class="p">[[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">,</span><span class="s1">&#39;MA for 10 days&#39;</span><span class="p">,</span><span class="s1">&#39;MA for 20 days&#39;</span><span class="p">,</span><span class="s1">&#39;MA for 50 days&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
@@ -1740,11 +1721,11 @@ C:\Anaconda2\lib\site-packages\ipykernel\__main__.py:8: FutureWarning: pd.rollin
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[39]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x94b2518&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x113e8940&gt;</pre>
 </div>
 
 </div>
@@ -2666,7 +2647,7 @@ M+uSAyozMzOzLjmgMjMzM+uSAyozMzOzLjmgMjMzM+vSX0qF5pJIVf0oAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">GOOG</span><span class="p">[</span><span class="s1">&#39;Daily Return&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">GOOG</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span> <span class="c1">#to find the percentage change for each day</span>
@@ -2684,11 +2665,11 @@ M+uSAyozMzOzLjmgMjMzM+uSAyozMzOzLjmgMjMzM+vSX0qF5pJIVf0oAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xbacdc50&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10f93588&gt;</pre>
 </div>
 
 </div>
